@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+  <title>java学习日记 - Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="java学习日记 - Hexo" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="http://example.com/2024/05/19/java%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/index.html" />
+  
+  <meta property="og:image" content="/favicon.png" />
+  
+  <meta property="og:article:published_time" content="2024-05-19T07:35:52.000Z" />
+  
+  <meta property="og:article:author" content="John Doe" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Blog</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="/friends">Friends</a>
+            
+            
+            
+            <a class="nav-item" href="/projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="/about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/MrWillCom" target="_blank" aria-label="GitHub">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-codepen nav-item-icon" href="https://codepen.io/mrwillcom" target="_blank" aria-label="CodePen">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-patreon nav-item-icon" href="https://www.patreon.com/MrWillCom" target="_blank" aria-label="Patreon">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-mastodon nav-item-icon" href="https://noc.social/@MrWillCom" target="_blank" aria-label="Mastodon">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-discord nav-item-icon" href="https://discord.gg/UKuFDjcfY8" target="_blank" aria-label="Discord">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank" aria-label="Search">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+<article class="post">
+    <div class="meta">
+        
+
+        
+        <div class="date" id="date">
+            <span>May</span>
+            <span>19,</span>
+            <span>2024</span>
+        </div>
+        
+
+        <h1 class="title">java学习日记</h1>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <p>Java：目前非常热门的编程语言 <font color="red" size="5">Write Once，RunAnywhere</font><br>1.简单性         2.面对对象<br>3.可移植性       4.高性能<br>5.分布式         6.多态性<br>7.多线程         8.安全性<br>9.健壮性</p>
+<p>Java 所有的组成部分都需要名字。类名、变量名、方法名都被称为标识符 关键字</p>
+<p><font color="red">标识符注意点：</font></p>
+<p>！所有标识符都应该以 字母、$(美元符)、_(下划线) 开头<br>首字母之后可以是 字母、$、_ 或数字任何字符组合<br>关键字不能作为变量名或方法名<br>标识符大小写敏感</p>
+<p><font color="red">可以用中文命名，但不建议使用</font>(nb)<br>当然 ，如果可以，请放弃拼音式命名</p>
+<p>数据类型:</p>
+<p>强类型语言<br>​ 要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用<br>    (类似于C++)<br>弱类型语言：JavaScript，Python</p>
+<p><font color="green">Example：</font><br>int num&#x3D;0;&#x2F;&#x2F;“maxint”should be less than 2.1 billions.</p>
+<p>byte num2 &#x3D; 20; &#x2F;&#x2F;-128~127</p>
+<p>short num3 &#x3D; 30;</p>
+<p>long num4 &#x3D; 30L; &#x2F;&#x2F;add “L”</p>
+<p>float num5 &#x3D; 50.1F; &#x2F;&#x2F;add “F”</p>
+<p>double num6 &#x3D; 3.141592653589793238;</p>
+<p>char name &#x3D; ‘国’;&#x2F;&#x2F;字符串, String不是关键字，是类&#x2F;&#x2F;String namea &#x3D; “薛之谦”;</p>
+<p>boolean flag &#x3D; true;<br><font color="green">__________________________________________________________</font></p>
+<p>int a &#x3D; 3;<br>int b &#x3D; a++; &#x2F;&#x2F;b&#x3D;a,a&#x3D;a+1 先赋值再自增 即b&#x3D;a   a&#x3D;a+1<br>int c &#x3D; ++a; &#x2F;&#x2F;a&#x3D;a+1,c&#x3D;a 先自增再赋值 即a&#x3D;a+1  c&#x3D;a<br><font color="red">_________________</font><br>第一个值为false，后面就不进行判定了</p>
+<p> &amp;&amp; 逻辑与运算：两个变量都为真，结果为true</p>
+<p>第一个值为true，后面就不进行判定了</p>
+<p> || 逻辑与运算：两个变量有一个为真，结果为true</p>
+<p> ! 取反，真变为假，假变为真</p>
+<p>same to c++;<br><font color="red">_________________</font></p>
+<p> x ? y : z<br>    &#x2F;&#x2F;如果x为真，则结果为y,否则为z<br>包的语法格式：<br>一般利用公司域名倒置作为包名；com.example.www<br>import java.util.*;<br>    JavaDoc生成文档<br>    javadoc命令是用来生成自己API文档的</p>
+<p>参数信息</p>
+<p>API文档：</p>
+<p>打开某个类所在文件夹下的cmd命令行</p>
+<p>输入：javadoc -encoding UTF-8 -charset UTF-8 Doc(类名).java<br>会自动生成该类有关的API文档，查看文件夹发现多了一些文件<br>打开 index.html（首页）查看文档注释</p>
+<p><font color="red">____________________</font></p>
+<p>int i&#x3D;0;<br>int sum&#x3D;0;<br>while(i&lt;100){<br>    i++;<br>    sum+&#x3D;i;<br>}<br>System.out.println(sum);</p>
+<p>&#x2F;&#x2F;一个简单的while循环；</p>
+<p>for(int i&#x3D;0;i&lt;100;i++){<br>    i++;<br>    sum+&#x3D;i;<br>}</p>
+<p>&#x2F;&#x2F;一个简单的for循环</p>
+<p>常见的break &amp; continue</p>
+<p>break 强行退出循环，不进行下一次循环条件判断。</p>
+<p>continue 终止本次循环过程，跳过剩余语句，之后进行下一次循环条件判断。</p>
+<p>方法的定义<br>Java的方法类似与其他语言的函数，是一段用来完成特定功能的代码片段。<br>方法包含一个方法头和一个方法体。</p>
+<p><font color="red">____________________</font><br>Example；</p>
+<p>修饰符 返回值类型 方法名（参数类型 参数名,…）{<br>   方法体…<br>   return 返回值；<br>}</p>
+<p>修饰符：定义了方法的访问类型<br><font color="red">面向对象的修饰符，public，private，final，static等等</font></p>
+<p>返回值类型：方法可能会返回值。returnValueType是方法返回值的数据类型。有些方法没有返回值，则returnValueType为关键字void。<br>方法名：是方法的实际名称<br>参数类型：参数列表是指方法的参数类型、顺序和参数个数。方法可以不包含任何参数。<br>形参：在方法被调用时用于接收外界输入的数据。<br>实参：调用方法时实际传给方法的数据。<br>方法体：方法体包含具体的语句，定义该方法的功能。</p>
+<p>方法的重载<br>重载是在一个类中，有相同的方法名，参数列表不同的方法。</p>
+<p>方法重载的规则：</p>
+<p>方法名称必须相同：<br>参数列表必须不同（个数、参数类型、或排序不同）<br>返回类型可以相同也可以不相同<br>仅仅返回类型不同不足以成为方法的重载</p>
+<p>递归：<br>递归就是：A方法调用A方法，自己调用自己！</p>
+<p>递归的能力在于用有限的语句来定义对象的无限集合。</p>
+<p><font color="red">____________________</font></p>
+<p>数组是相同类型数据的有序集合<br>数组描述的是相同类型的若干数据，按照一定先后次序排序组合而成<br>其中，每一个数据称作一个数组元素，每个数组元素可以通过下标访问它们</p>
+<p>dataType[] arrayRefVar &#x3D; new dataType[arraySize]; </p>
+<p>int[] a&#x3D;new int[200];<br>a[0]&#x3D;1;<br>a[1]&#x3D;1;<br>a[2]&#x3D;1;<br>for (int num:nums){<br>    System.out.println(num);<br>}</p>
+<p>数组的三种初始化</p>
+<p>一：静态初始化<br>int[] a&#x3D;{1,2,3};<br>Man[] mans&#x3D;{new Man(1,1),new Man(2,2)}<br>二：动态初始化<br>int[] a&#x3D;new int[2]; &#x2F;&#x2F;默认值为0<br>a[0]&#x3D;1;<br>a[1]&#x3D;2;</p>
+<p><font color="red">数组的基本特点：</font></p>
+<p>其长度是确定的，数组一旦被创建，它的大小就是不可改变的。</p>
+<p>其元素必须是相同类型，不允许出现混合类型。</p>
+<p>数组中的元素可以是任何数据类型，包括基本类型和引用类型。</p>
+<p>数组变量属于引用类型，数组也可以看作对象，其中每个元素相当于该对象的成员变量。</p>
+<p>数组本身就是对象，Java中对象是在堆中的，因此数组本身是在堆中的。</p>
+<p>For-Each循环遍历；<br>int[] arrays &#x3D; {1,2,3,4,5};<br>for (int array : arrays) {<br>    System.out.println(array);<br>}</p>
+<p>数组作方法入参；<br>for (int i &#x3D; 0; i &lt; a.length; i++) {<br>        System.out.print(a[i]+” “);<br>    }</p>
+<p>数组作返回值；<br>int[] result &#x3D; new int[arrays.length];<br>    &#x2F;&#x2F;反转的操作<br>    for (int i &#x3D; 0; i &lt; arrays.length; i++) {<br>        result[i] &#x3D; arrays[arrays.length-i-1];<br>    }<br>return result;</p>
+<p>&#x2F;&#x2F;面向对象编程</p>
+
+    </div>
+
+    
+    <div class="about">
+        <h1>About this Post</h1>
+        <div class="details">
+            <p>This post is written by John Doe, licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0</a>.</p>
+        </div>
+        
+    </div>
+    
+
+    <div class="container post-prev-next">
+        
+        <a href="/2024/05/19/Mysql%E6%B3%A8%E5%85%A5/" class="next">
+            <div>
+                <div class="text">
+                    <p class="label">Next</p>
+                    <h3 class="title">Mysql注入</h3>
+                </div>
+            </div>
+        </a>
+        
+        
+        <a href="/2024/05/18/my-first-Blog/" class="prev">
+            <div>
+                <div class="text">
+                    <p class="label">Previous</p>
+                    <h3 class="title">my-first-Blog</>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    
+        
+        
+    
+</article>
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h2 class="title">Blog</h2>
+                
+                <a href="/" class="item">Blog</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+                <a href="/search" class="item">Search</a>
+                
+                <a href="/friends" class="item">Friends</a>
+                
+                <a href="/projects" class="item">Projects</a>
+                
+                <a href="/resume" class="item">Resume</a>
+                
+                <a href="/about" class="item">About</a>
+                
+                <a href="/atom.xml" class="item">RSS</a>
+                
+            </div>
+            
+            <div class="group">
+                <h2 class="title">Projects</h2>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/rsa-cli" class="item">RSA CLI</a>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/hexo-theme-cupertino" class="item">Hexo Theme Cupertino</a>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/a-calendar" class="item">A Calendar</a>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/auto-mirroring-bucket" class="item">Auto Mirroring Bucket</a>
+                
+            </div>
+            
+            <div class="group">
+                <h2 class="title">Me</h2>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom" class="item">GitHub</a>
+                
+                <a target="_blank" rel="noopener" href="https://codepen.io/mrwillcom" class="item">CodePen</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.patreon.com/MrWillCom" class="item">Patreon</a>
+                
+                <a target="_blank" rel="noopener" href="https://noc.social/@MrWillCom" class="item">Mastodon</a>
+                
+                <a target="_blank" rel="noopener" href="https://discord.gg/UKuFDjcfY8" class="item">Discord</a>
+                
+                <a href="mailto:mr.will.com@outlook.com" class="item">Email</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2024 John Doe<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>
