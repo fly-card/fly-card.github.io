@@ -216,22 +216,17 @@
 <p> <font size="6">下面来解释下information_schema和information_schema.COLUMNS</font></p>
 <p>information_schema是MySQL数据库系统中的一个特殊数据库，它包含了关于数据库、表、列、索引、权限等元数据信息的视图和表。<font color="red">它不存储实际的数据，而是提供了一种访问和查询数据库元数据的方式。</font></p>
 <h1 id="information-schema-COLUMNS是information-schema数据库中的一个表，它存储了关于数据库中所有表的列信息。"><a href="#information-schema-COLUMNS是information-schema数据库中的一个表，它存储了关于数据库中所有表的列信息。" class="headerlink" title="information_schema.COLUMNS是information_schema数据库中的一个表，它存储了关于数据库中所有表的列信息。"></a>information_schema.COLUMNS是information_schema数据库中的一个表，它存储了关于数据库中所有表的列信息。</h1><p>{<br>TABLE_SCHEMA：列所属的数据库名称。<br>TABLE_NAME：列所属的表名称。<br>COLUMN_NAME：列的名称。<br>COLUMN_TYPE：列的数据类型。<br>COLUMN_KEY：列是否为主键或唯一键。<br>IS_NULLABLE：列是否允许为空。<br>COLUMN_DEFAULT：列的默认值。<br>EXTRA：列的附加信息。<br>COLUMN_COMMENT：列的注释信息。<br>}</p>
-<p><font size="4">在 MySQL 中，把 information_schema 看做是一个数据库，确切的说是信息数据库。它保存着关于 MySQL 服务器所维护的所有其他数据库的信息，如：数据库名，数据库的表，表栏的数据类型与访问权限等。在 information_schema 中，有数个只读表。它们实际上是视图，而不是基本表，因此，你将无法看到与之相关的任何文件。</font></p>
+<p>爆相应字段的所有数据<br>?id&#x3D;-1’ union select 1,group_concat(id,’–‘,username,’–’,password),3 from users –+</p>
 <p>报错注入<br>含义：就是在mysql中使用指定函数来制造报错，查询的时候加一些格式错误的信息，它会提示你格式错误，可以在中间加入一些其他信息，比如select database(),报错信息后面也会出现数据库信息.</p>
-<p>报错注入：利用数据库的报错信息得到数据库的内容。因此需要构造语句让数据库报错。</p>
-<p>1.group by 重复健冲<br>and (select 1 from (select count(*),concat((select 查询的内容 from information_schema.tables limit 0,1),floor(rand()*2))x from information_schema.table group by x)a) –+</p>
-<p>2.extractvalue()函数</p>
+<p>三种报错注入的方法：</p>
+<p>group by 重复健冲<br>and (select 1 from (select count(*）,concat((select 查询的内容 from information_schema.tables limit 0,1),floor(rand()*2))x from information_schema.table group by x)a) –+</p>
+<p>extractvalue()函数</p>
 <p>?id&#x3D;1’ and extractvalue(1,concat(‘^’,(select database()),’^’)) –+&#x2F;&#x2F;获取数据库名字</p>
-<p>extractvalue(xml_frag,xpath_expr)；</p>
 <p>函数接受两个参数，第一个为XML标记内容，也就是查询的内容，第二个为XPATH路径，也就是查询的路径。</p>
 <p>如果没有匹配的内容，不管出于何种原因，只要路径有效并且查询的内容由正确嵌套和关闭的元素组成，返回空字符串。</p>
 <p>但如果路径写入错误格式，就会报错并且返回我们写入的非法内容。</p>
-<p>3.updatexml()函数</p>
+<p>updatexml()函数</p>
 <p>?id&#x3D;1’ and updatexml(1,conncat(‘^’,(需要查询的内容),’^’)，1) –+</p>
-<p>updatexml(xml_target,xpath_expr,new_xml)；</p>
-<p>此函数将XML标记的给定片段的单个部分替换为xml_target新的XML片段new_xml，然后返回更改的XML。</p>
-<p>xml_target替换的部分 与xpath_expr 用户提供的XPath表达式匹配。如果未xpath_expr找到表达式匹配 ，或者找到多个匹配项，则该函数返回原始 xml_targetXML片段。</p>
-<p>所有三个参数都应该是字符串。与extractvalue()类似，如果XPATH写入错误格式，就会报错，并且返回我们写入的非法内容。&#x2F;&#x2F;</p>
 <p>回显注入<br>回显注入：利用注入漏洞可以改变页面返回数据。</p>
 <p>基于布尔的盲注<br>布尔盲注：即在页面不显示数据，只显示对错，此时我们输入的语句让页面呈现两种状态，相当于true和false，根据这两种状态判断我们输入的语句是否查询成功。</p>
 <p>因此需要构造判断语句，根据页面是否回显证实猜想。</p>
@@ -242,7 +237,8 @@
 <p>m 从第m个字符开始截取</p>
 <p>n 截取后字符串长度为n</p>
 <p>concat()函数：concat ()方法用于连接两个或多个数组。用于输出在页面中。</p>
-<p>步骤</p>
+<p>判断数据库类型<br>数据库可能的类型：</p>
+<p>MySQL、 access、 SQL sever 、information_schema.tables、msysobjects、sysobjects、</p>
 
     </div>
 

